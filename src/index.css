@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    box-sizing: border-box;
+}
+
+/* .line::before{
+width: 10px;
+height: 70px;
+display: relative;
+bottom: 5;
+}
+.line::after{
+    width: 20px;
+    height: 90px;
+} */
+
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.menu-info{
+
+    position: fixed;
+    height: 90%;
+    z-index: 1;
+    top: 100px;
+    width: 90%;
+    transition: 0.05s;
+    opacity: 1;
+}
+.appear{
+    animation: appear 0.45s 
+     backwards; 
+}
+.menu-info li{
+    color: #f9f9f9 ;
+    text-transform: capitalize;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.menu-info ul:hover > li {
+    opacity: 1;
+}
+.menu-info > li:hover {
+    opacity: 1;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        translate: 0 30px;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.close-menu{
+    transition: 0.6s;
+}
